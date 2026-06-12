@@ -936,6 +936,130 @@
         .fade-in {
             animation: fadeInUp 0.6s ease-out;
         }
+
+        /* About Section */
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: start;
+            margin-top: 3rem;
+        }
+
+        .about-text {
+            color: var(--text-secondary);
+            line-height: 1.9;
+            font-size: 1.05rem;
+        }
+
+        .about-text p {
+            margin-bottom: 1.2rem;
+        }
+
+        .timeline {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .timeline-item {
+            background: rgba(79, 142, 247, 0.06);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-right: 3px solid var(--accent-primary);
+            border-radius: 12px;
+            padding: 1.25rem 1.5rem;
+            transition: var(--transition);
+        }
+
+        .timeline-item:hover {
+            border-right-color: var(--accent-secondary);
+            background: rgba(124, 58, 237, 0.08);
+            transform: translateX(-4px);
+        }
+
+        .timeline-item h4 {
+            color: var(--text-primary);
+            font-size: 1rem;
+            margin-bottom: 0.35rem;
+        }
+
+        .timeline-item .timeline-date {
+            color: var(--accent-primary);
+            font-size: 0.85rem;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .timeline-item p {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        /* Project Image with real photos */
+        .project-image {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(135deg, rgba(79, 142, 247, 0.2) 0%, rgba(124, 58, 237, 0.2) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .project-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .project-image.logo-bg {
+            background: #fff;
+            padding: 1rem;
+        }
+
+        .project-image.logo-bg img {
+            object-fit: contain;
+        }
+
+        .project-card:hover .project-image img {
+            transform: scale(1.05);
+        }
+
+        @media (max-width: 768px) {
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 900px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-card {
+                display: none;
+            }
+
+            .hero-details {
+                text-align: center;
+            }
+
+            .hero-buttons {
+                justify-content: center;
+            }
+
+            .hero-stats {
+                justify-content: center;
+            }
+
+            .social-links {
+                justify-content: center;
+            }
+        }
     </style>
 </head>
 <body>
@@ -945,6 +1069,7 @@
             <div class="logo">AZ</div>
             <ul class="nav-links">
                 <li><a href="#home">الرئيسية</a></li>
+                <li><a href="#about">من أنا</a></li>
                 <li><a href="#services">الخدمات</a></li>
                 <li><a href="#why">لماذا أنا</a></li>
                 <li><a href="#projects">المشاريع</a></li>
@@ -1020,6 +1145,54 @@
         </div>
     </section>
 
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title">من أنا</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        أنا عبدالعزيز، خريج نظم المعلومات من جامعة الملك سعود مع تخصص ثانوي في علم البيانات.
+                        شغفي الحقيقي هو تحويل البيانات إلى قرارات، وبناء تطبيقات تحل مشاكل حقيقية.
+                    </p>
+                    <p>
+                        اكتسبت خبرة عملية متميزة خلال تدريبي في وزارة الموارد البشرية حيث عملت على
+                        أنظمة Oracle المتكاملة، وبنيت خطوط ETL، وساهمت في تطوير مستودع البيانات المؤسسي.
+                    </p>
+                    <p>
+                        مشروع تخرجي كان مقارنة بين نموذجين ضخمين (BERT vs GPT-2) في تحليل المشاعر،
+                        حيث أثبتت النتائج تفوق BERT في دقة التصنيف على البيانات العربية والإنجليزية.
+                    </p>
+                    <p>
+                        أحب بناء الأشياء من الصفر — سواء كان تطبيق جوال، لوحة تحكم تحليلية، أو نموذج ذكاء اصطناعي.
+                    </p>
+                </div>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-date">🎓 2020 — 2025</div>
+                        <h4>جامعة الملك سعود</h4>
+                        <p>بكالوريوس نظم المعلومات + تخصص ثانوي علم البيانات — الرياض، المملكة العربية السعودية</p>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">💼 2024 — 7 أشهر</div>
+                        <h4>متدرب — وزارة الموارد البشرية والتنمية الاجتماعية</h4>
+                        <p>Oracle DB · ODI · ETL · Data Warehouse · تقارير BI · تحليل البيانات المؤسسية</p>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">🤖 مشروع التخرج</div>
+                        <h4>BERT vs GPT-2 — تحليل المشاعر</h4>
+                        <p>مقارنة نماذج اللغة الكبيرة في تصنيف المشاعر · Python · TensorFlow · Hugging Face</p>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">📱 مشروع رائد</div>
+                        <h4>Dice GO — تطبيق توصيل البقالة</h4>
+                        <p>Flutter · Supabase · Firebase · نظام دفع متكامل · تتبع الطلبات لحظياً</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Services Section -->
     <section id="services">
         <div class="container">
@@ -1059,8 +1232,6 @@
         </div>
     </section>
 
-    </section>
-
     <!-- Why Choose Me Section -->
     <section id="why">
         <div class="container">
@@ -1092,38 +1263,48 @@
             <h2 class="section-title">المشاريع</h2>
             <div class="projects-grid">
                 <div class="project-card">
-                    <div class="project-image">📦</div>
+                    <div class="project-image logo-bg">
+                        <img src="images/dicego-logo.png" alt="Dice GO Logo" onerror="this.parentElement.innerHTML='📦'">
+                    </div>
                     <div class="project-content">
-                        <h3>Dice GO</h3>
-                        <p class="project-description">تطبيق توصيل بقالة احترافي مع نظام دفع متقدم وتتبع الطلبات.</p>
+                        <h3>Dice GO — تطبيق توصيل البقالة</h3>
+                        <p class="project-description">تطبيق جوال متكامل لتوصيل البقالة مع نظام دفع إلكتروني، تتبع الطلبات لحظياً، وواجهة مستخدم سلسة.</p>
                         <div class="project-tech">
                             <span class="tech-tag">Flutter</span>
                             <span class="tech-tag">Supabase</span>
                             <span class="tech-tag">Firebase</span>
+                            <span class="tech-tag">Dart</span>
                         </div>
                     </div>
                 </div>
                 <div class="project-card">
-                    <div class="project-image">🤖</div>
+                    <div class="project-image">
+                        <img src="images/bert-results.png" alt="BERT Sentiment Classification" onerror="this.parentElement.innerHTML='🤖'">
+                    </div>
                     <div class="project-content">
-                        <h3>NLP Project</h3>
-                        <p class="project-description">نموذج تعليم آلي لتحليل النصوص العربية ومعالجة اللغات الطبيعية.</p>
+                        <h3>BERT vs GPT-2 — تحليل المشاعر (مشروع التخرج)</h3>
+                        <p class="project-description">مقارنة علمية بين نموذجي BERT وGPT-2 في تصنيف المشاعر. أثبت BERT تفوقاً واضحاً بدقة تصنيف أعلى وconfidence scores أقوى.</p>
                         <div class="project-tech">
                             <span class="tech-tag">Python</span>
-                            <span class="tech-tag">TensorFlow</span>
                             <span class="tech-tag">BERT</span>
+                            <span class="tech-tag">GPT-2</span>
+                            <span class="tech-tag">Hugging Face</span>
+                            <span class="tech-tag">TensorFlow</span>
                         </div>
                     </div>
                 </div>
                 <div class="project-card">
-                    <div class="project-image">📊</div>
+                    <div class="project-image">
+                        <img src="images/powerbi-dashboard.png" alt="Power BI Dashboard" onerror="this.parentElement.innerHTML='📊'">
+                    </div>
                     <div class="project-content">
-                        <h3>Power BI Dashboards</h3>
-                        <p class="project-description">لوحات تحليلية تفاعلية لتتبع المؤشرات الرئيسية والأداء.</p>
+                        <h3>لوحات Power BI التحليلية</h3>
+                        <p class="project-description">4 لوحات تحليلية تفاعلية تشمل: تحليل المبيعات، تحليل الوقت، التحليل المتقدم حسب المنطقة والمنتج والعميل.</p>
                         <div class="project-tech">
                             <span class="tech-tag">Power BI</span>
                             <span class="tech-tag">DAX</span>
                             <span class="tech-tag">SQL</span>
+                            <span class="tech-tag">Data Modeling</span>
                         </div>
                     </div>
                 </div>
@@ -1254,8 +1435,6 @@
         </div>
     </section>
 
-    </section>
-
     <button class="scroll-top" id="scrollTopBtn" aria-label="العودة للأعلى">↑</button>
 
     <!-- Footer -->
@@ -1335,6 +1514,19 @@
                 });
             });
         }
+
+        // Scroll-to-top button
+        const scrollTopBtn = document.getElementById('scrollTopBtn');
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 400) {
+                scrollTopBtn.classList.add('show');
+            } else {
+                scrollTopBtn.classList.remove('show');
+            }
+        });
+        scrollTopBtn.addEventListener('click', function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
     </script>
 </body>
 </html>
