@@ -927,6 +927,24 @@
             }
         }
 
+        .hero-services-preview {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.6rem;
+            margin-top: 1.5rem;
+            justify-content: flex-end;
+        }
+
+        .hero-services-preview span {
+            background: rgba(255,255,255,0.06);
+            border: 1px solid rgba(255,255,255,0.12);
+            padding: 0.4rem 0.9rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            white-space: nowrap;
+        }
+
         /* Smooth Scroll */
         html {
             scroll-behavior: smooth;
@@ -1069,12 +1087,12 @@
             <div class="logo">AezyTech</div>
             <ul class="nav-links">
                 <li><a href="#home">الرئيسية</a></li>
-                <li><a href="#about">من أنا</a></li>
+                <li><a href="#about">من نحن</a></li>
                 <li><a href="#services">الخدمات</a></li>
-                <li><a href="#why">لماذا أنا</a></li>
-                <li><a href="#projects">المشاريع</a></li>
-                <li><a href="#skills">المهارات</a></li>
-                <li><a href="#contact">التواصل</a></li>
+                <li><a href="#why">لماذا نحن</a></li>
+                <li><a href="#projects">أعمالنا</a></li>
+                <li><a href="#skills">تقنياتنا</a></li>
+                <li><a href="#contact">تواصل معنا</a></li>
             </ul>
             <button class="menu-toggle">☰</button>
         </nav>
@@ -1084,34 +1102,23 @@
     <section class="hero" id="home">
         <div class="hero-content">
             <div class="hero-details">
+                <div style="display:inline-block;background:rgba(79,142,247,0.15);border:1px solid rgba(79,142,247,0.4);border-radius:20px;padding:0.4rem 1rem;font-size:0.85rem;color:var(--accent-primary);margin-bottom:1rem;letter-spacing:0.5px;">
+                    ✦ متاح للمشاريع · الرياض، السعودية
+                </div>
                 <h1>AezyTech</h1>
-                <div class="subtitle">مطور حلول تقنية</div>
-                <p>متخصص في تطوير المواقع والتطبيقات، تحليل البيانات، وقواعد البيانات — من الرياض 🇸🇦</p>
+                <div class="subtitle">حلول تقنية ذكية لأعمال ناجحة</div>
+                <p>نبني مواقع، تطبيقات، أنظمة بيانات، وروبوتات ذكاء اصطناعي — من الرياض للعالم 🇸🇦</p>
                 <div class="hero-buttons">
-                    <a href="#contact" class="btn btn-primary">ابدأ مشروعك</a>
-                    <a href="#projects" class="btn btn-secondary">اطلع على أعمالي</a>
-                    <a href="#contact" class="btn btn-secondary">تحميل السيرة الذاتية</a>
+                    <a href="#contact" class="btn btn-primary">ابدأ مشروعك الآن</a>
+                    <a href="#projects" class="btn btn-secondary">شاهد أعمالنا</a>
                 </div>
-                <div class="hero-intro">
-                    <p>أبني مواقع ويب، تطبيقات جوال، لوحات تحكم، وأنظمة بيانات متكاملة — حلول تقنية حقيقية تخدم الأعمال.</p>
-                </div>
-                <div class="hero-detail-list">
-                    <div class="detail-item">
-                        <h4>التخصص</h4>
-                        <p>نظم المعلومات وتحليل البيانات</p>
-                    </div>
-                    <div class="detail-item">
-                        <h4>الموقع</h4>
-                        <p>الرياض، المملكة العربية السعودية</p>
-                    </div>
-                    <div class="detail-item">
-                        <h4>الهاتف</h4>
-                        <p>+966 50 262 0372</p>
-                    </div>
-                    <div class="detail-item">
-                        <h4>البريد</h4>
-                        <p>Abdulaziz.mut@outlook.com</p>
-                    </div>
+                <div class="hero-services-preview">
+                    <span>🌐 مواقع ويب</span>
+                    <span>📱 تطبيقات</span>
+                    <span>🤖 AI Chatbot</span>
+                    <span>📊 لوحات BI</span>
+                    <span>🗄️ قواعد بيانات</span>
+                    <span>💬 واتساب تلقائي</span>
                 </div>
                 <div class="hero-stats">
                     <div class="stat-item">
@@ -1120,11 +1127,15 @@
                     </div>
                     <div class="stat-item">
                         <h4>2</h4>
-                        <span>داشبورد تحليلي وتحكم</span>
+                        <span>لوحات تحكم وتحليل</span>
                     </div>
                     <div class="stat-item">
                         <h4>7+</h4>
                         <span>مشروع منجز</span>
+                    </div>
+                    <div class="stat-item">
+                        <h4>حكومي</h4>
+                        <span>خبرة مؤسسية</span>
                     </div>
                 </div>
                 <div class="social-links">
@@ -1148,20 +1159,20 @@
     <!-- About Section -->
     <section id="about">
         <div class="container">
-            <h2 class="section-title">من أنا</h2>
+            <h2 class="section-title">عن AezyTech</h2>
             <div class="about-content">
                 <div class="about-text">
                     <p>
-                        خريج نظم المعلومات من جامعة الملك سعود 2026، أعمل تحت براند <strong style="color:var(--accent-primary)">AezyTech</strong> لتقديم حلول تقنية متكاملة تجمع بين تطوير الويب، الموبايل، وتحليل البيانات.
+                        <strong style="color:var(--accent-primary)">AezyTech</strong> هي وكالة حلول تقنية متكاملة متخصصة في بناء المواقع، التطبيقات، أنظمة البيانات، وحلول الذكاء الاصطناعي للشركات والمؤسسات.
                     </p>
                     <p>
-                        أنجزت <strong style="color:var(--accent-primary)">4 مواقع ويب</strong> وبرنامج متكامل، إضافة إلى <strong style="color:var(--accent-primary)">داشبورد تحكم</strong> و<strong style="color:var(--accent-primary)">داشبورد تحليلية</strong> احترافية — كل مشروع يُحل مشكلة حقيقية.
+                        أنجزنا <strong style="color:var(--accent-primary)">4 مواقع ويب</strong> احترافية، وبرنامج متكامل، و<strong style="color:var(--accent-primary)">داشبورد تحكم إداري</strong>، و<strong style="color:var(--accent-primary)">داشبورد تحليلي تفاعلي</strong> — كل مشروع يحل مشكلة حقيقية ويُضيف قيمة فعلية.
                     </p>
                     <p>
-                        خبرة عملية في وزارة الموارد البشرية حيث عملت متخصصاً في مستودع البيانات — Oracle DB، ODI، ETL، تصميم قواعد البيانات من الصفر، ومراقبة جودة البيانات.
+                        خبرة مؤسسية حقيقية في وزارة الموارد البشرية: تصميم قواعد بيانات من الصفر، Oracle DB، ODI، ETL، مستودعات البيانات، ومراقبة جودة البيانات.
                     </p>
                     <p>
-                        مشروع تخرجي: مقارنة BERT vs GPT-2 في تحليل المشاعر — أثبت BERT تفوقاً واضحاً على البيانات العربية والإنجليزية.
+                        خلفية أكاديمية قوية: نظم المعلومات + علم البيانات من جامعة الملك سعود، وبحث تخرج في الذكاء الاصطناعي (BERT vs GPT-2 لتحليل المشاعر العربية).
                     </p>
                 </div>
                 <div class="timeline">
@@ -1193,37 +1204,68 @@
     <!-- Services Section -->
     <section id="services">
         <div class="container">
-            <h2 class="section-title">الخدمات</h2>
+            <h2 class="section-title">خدماتنا</h2>
+            <p style="text-align:center;color:var(--text-secondary);margin-bottom:3rem;font-size:1.1rem;">حلول متكاملة تغطي كل احتياجات عملك التقني</p>
             <div class="services-grid">
                 <div class="service-card">
                     <div class="service-icon">🌐</div>
-                    <h3>تصميم المواقع</h3>
-                    <p>تصميم وتطوير مواقع ويب احترافية وسريعة مع أفضل الممارسات</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">📊</div>
-                    <h3>لوحات Power BI</h3>
-                    <p>إنشاء لوحات تحليلية تفاعلية لتصور البيانات وقياس الأداء</p>
+                    <h3>تصميم وتطوير المواقع</h3>
+                    <p>مواقع ويب احترافية وسريعة — لوحة بيانات، موقع شركة، متجر إلكتروني، أو صفحة تعريفية.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">📱</div>
                     <h3>تطبيقات الجوال</h3>
-                    <p>تطوير تطبيقات جوال أصلية عالية الأداء باستخدام Flutter</p>
+                    <p>تطبيقات iOS وAndroid باستخدام Flutter — من الفكرة حتى النشر على المتجر.</p>
                 </div>
                 <div class="service-card">
-                    <div class="service-icon">🗄️</div>
-                    <h3>إدارة قواعد البيانات</h3>
-                    <p>تصميم وإدارة قواعد بيانات قوية وآمنة (SQL, Oracle)</p>
+                    <div class="service-icon">🤖</div>
+                    <h3>روبوت دردشة ذكي (AI Chatbot)</h3>
+                    <p>chatbot مدعوم بالذكاء الاصطناعي يرد على عملاءك تلقائياً — يُدمج في موقعك أو واتساب.</p>
                 </div>
                 <div class="service-card">
-                    <div class="service-icon">📈</div>
-                    <h3>تحليل البيانات</h3>
-                    <p>تحليل البيانات الضخمة واستخراج الرؤى القيمة</p>
+                    <div class="service-icon">📊</div>
+                    <h3>لوحات Power BI التحليلية</h3>
+                    <p>لوحات تحليلية تفاعلية تحول بياناتك إلى قرارات — مبيعات، أداء، تقارير مؤسسية.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">🎛️</div>
-                    <h3>لوحات التحكم</h3>
-                    <p>بناء لوحات تحكم إدارية مخصصة وسهلة الاستخدام</p>
+                    <h3>لوحات التحكم الإدارية</h3>
+                    <p>نظام إدارة مخصص لشركتك — متابعة الطلبات، الموظفين، أو المخزون من مكان واحد.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">💬</div>
+                    <h3>أتمتة واتساب للأعمال</h3>
+                    <p>ربط نظامك بواتساب — ردود تلقائية، تأكيد حجوزات، وإشعارات فورية للعملاء.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🗄️</div>
+                    <h3>تصميم قواعد البيانات</h3>
+                    <p>تصميم وإدارة قواعد بيانات قوية وآمنة — SQL, Oracle, Supabase مع نمذجة بيانات احترافية.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">📈</div>
+                    <h3>تحليل البيانات بالذكاء الاصطناعي</h3>
+                    <p>تحليل بياناتك باستخدام Python وML — توقعات، تصنيف، واكتشاف أنماط خفية.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">📬</div>
+                    <h3>تقارير BI تلقائية</h3>
+                    <p>تقارير أسبوعية أو شهرية تُولَّد تلقائياً وتُرسل للإدارة — دون أي تدخل يدوي.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🏪</div>
+                    <h3>نظام تتبع المبيعات والمخزون</h3>
+                    <p>تطبيق ويب بسيط لأصحاب المحلات والمطاعم — تتبع المخزون، المبيعات اليومية، والأرباح.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🏛️</div>
+                    <h3>خدمات البيانات المؤسسية</h3>
+                    <p>حلول ETL، مستودعات البيانات، ومراقبة الجودة للجهات الحكومية والمؤسسات الكبيرة.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🧠</div>
+                    <h3>تطبيقات Flutter + AI</h3>
+                    <p>تطبيقات جوال تحتوي ميزات ذكية — تحليل صور، توصيات شخصية، أو مساعد ذكي مدمج.</p>
                 </div>
             </div>
         </div>
@@ -1232,23 +1274,38 @@
     <!-- Why Choose Me Section -->
     <section id="why">
         <div class="container">
-            <h2 class="section-title">لماذا تختارني</h2>
+            <h2 class="section-title">لماذا AezyTech</h2>
+            <p style="text-align:center;color:var(--text-secondary);margin-bottom:3rem;font-size:1.1rem;">نجمع ما يندر وجوده في مكان واحد</p>
             <div class="why-grid">
                 <div class="highlight-card">
-                    <h3>حلول مخصصة</h3>
-                    <p>أعمل على تصميم أنظمة تلبي احتياجات العمل بالضبط، وتدعم التطوير المستقبلي.</p>
+                    <div style="font-size:2rem;margin-bottom:0.75rem;">🎯</div>
+                    <h3>حلول مخصصة 100%</h3>
+                    <p>ما نبني قوالب جاهزة — كل مشروع يُصمم من الصفر ليناسب احتياجات عملك بالضبط.</p>
                 </div>
                 <div class="highlight-card">
-                    <h3>خبرة تقنية</h3>
-                    <p>خبرة في Flutter، Power BI، قواعد البيانات، وتحليل البيانات بطرق حديثة وفعالة.</p>
+                    <div style="font-size:2rem;margin-bottom:0.75rem;">🔀</div>
+                    <h3>مزيج نادر من التخصصات</h3>
+                    <p>موبايل + ويب + بيانات + AI في مكان واحد — ما تحتاج تتعامل مع أكثر من جهة.</p>
                 </div>
                 <div class="highlight-card">
-                    <h3>سرعة التنفيذ</h3>
-                    <p>التسليم في الوقت المناسب مع جودة عالية وتجربة مستخدم متفوقة.</p>
+                    <div style="font-size:2rem;margin-bottom:0.75rem;">🏛️</div>
+                    <h3>خبرة مؤسسية حكومية</h3>
+                    <p>خبرة فعلية في وزارة الموارد البشرية — Oracle، ETL، مستودعات بيانات على مستوى حكومي.</p>
                 </div>
                 <div class="highlight-card">
-                    <h3>دعم مستمر</h3>
-                    <p>أقدم دعمًا دائمًا بعد التسليم لضمان استقرار الحلول ورضا العميل.</p>
+                    <div style="font-size:2rem;margin-bottom:0.75rem;">⚡</div>
+                    <h3>تسليم سريع بجودة عالية</h3>
+                    <p>نلتزم بالمواعيد ونسلّم مشاريع تعمل بكفاءة — لا وعود فارغة.</p>
+                </div>
+                <div class="highlight-card">
+                    <div style="font-size:2rem;margin-bottom:0.75rem;">🤝</div>
+                    <h3>شراكة وليس مجرد تنفيذ</h3>
+                    <p>نفهم مشكلتك التجارية أولاً، ثم نقترح الحل الأمثل — مش بس نكتب كود.</p>
+                </div>
+                <div class="highlight-card">
+                    <div style="font-size:2rem;margin-bottom:0.75rem;">🛡️</div>
+                    <h3>دعم مستمر بعد التسليم</h3>
+                    <p>ما تُسلَّم المشروع وتنتهي العلاقة — نوفر دعماً مستمراً لضمان استقرار الحل.</p>
                 </div>
             </div>
         </div>
@@ -1257,7 +1314,7 @@
     <!-- Projects Section -->
     <section id="projects">
         <div class="container">
-            <h2 class="section-title">المشاريع</h2>
+            <h2 class="section-title">أبرز أعمالنا</h2>
             <div class="projects-grid">
                 <div class="project-card">
                     <div class="project-image logo-bg">
@@ -1310,7 +1367,7 @@
                 <h3 style="text-align:center; margin-top:4rem; color: var(--accent-primary);">آراء العملاء</h3>
                 <div class="testimonial-grid">
                     <div class="testimonial-card">
-                        <p>"عبدالعزيز قدم لنا حل متكامل وسريع، واجهته ممتازة وتجربة مستخدم رائعة."</p>
+                        <p>"AezyTech قدمت لنا حلاً متكاملاً وسريعاً، الواجهة ممتازة وتجربة المستخدم رائعة."</p>
                         <span>عميل سعيد</span>
                     </div>
                     <div class="testimonial-card">
@@ -1325,7 +1382,7 @@
     <!-- Skills Section -->
     <section id="skills">
         <div class="container">
-            <h2 class="section-title">المهارات</h2>
+            <h2 class="section-title">تقنياتنا</h2>
             <div class="skills-grid">
                 <div class="skill-category">
                     <h3>تطوير الجوال</h3>
@@ -1392,7 +1449,7 @@
             <div class="contact-section">
                 <div class="contact-content">
                     <div class="contact-info">
-                        <h3 style="font-size: 1.5rem; margin-bottom: 1rem;">دعني أساعدك في مشروعك</h3>
+                        <h3 style="font-size: 1.5rem; margin-bottom: 1rem;">دعنا نبني مشروعك معاً</h3>
                         <div class="contact-item">
                             <div class="contact-icon">📧</div>
                             <div class="contact-item-content">
@@ -1443,8 +1500,9 @@
     <!-- Footer -->
     <footer>
         <div class="container">
-            <p>&copy; 2026 AezyTech - جميع الحقوق محفوظة</p>
-            <p style="margin-top: 1rem; font-size: 0.9rem;">مطور حلول تقنية من الرياض</p>
+            <p style="font-size:1.1rem;font-weight:600;background:var(--gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">AezyTech</p>
+            <p style="margin-top:0.5rem;">&copy; 2026 — جميع الحقوق محفوظة</p>
+            <p style="margin-top: 0.75rem; font-size: 0.9rem; color: var(--text-secondary);">وكالة حلول تقنية · مواقع · تطبيقات · بيانات · AI · الرياض 🇸🇦</p>
         </div>
     </footer>
 
