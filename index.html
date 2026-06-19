@@ -1137,6 +1137,81 @@
             font-size: 1.05rem;
             margin-top: -1.5rem;
         }
+
+        /* === BACKGROUND PATHS 21st.dev === */
+        .hero-paths-svg {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        @keyframes letterSpring {
+            0%   { opacity:0; transform: translateY(80px) scale(0.8); }
+            60%  { opacity:1; transform: translateY(-10px) scale(1.04); }
+            80%  { transform: translateY(4px) scale(0.99); }
+            100% { opacity:1; transform: translateY(0) scale(1); }
+        }
+
+        .hero-letter {
+            display: inline-block;
+            opacity: 0;
+            animation: letterSpring 0.65s cubic-bezier(0.34,1.56,0.64,1) forwards;
+            background: linear-gradient(135deg,#ffffff 0%,rgba(255,255,255,0.75) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero h1.letters-split {
+            background: none !important;
+            -webkit-text-fill-color: transparent !important;
+        }
+
+        .btn-glass-wrap {
+            display: inline-block;
+            background: linear-gradient(to bottom,rgba(255,255,255,0.1),rgba(255,255,255,0.04));
+            padding: 1px;
+            border-radius: 18px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.35);
+            transition: box-shadow 0.3s ease;
+        }
+
+        .btn-glass-wrap:hover { box-shadow: 0 20px 50px rgba(79,142,247,0.3); }
+
+        .btn-glass {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 0.85rem 2rem;
+            border-radius: 17px;
+            background: rgba(10,10,15,0.9);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.1);
+            color: rgba(255,255,255,0.9);
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .btn-glass:hover {
+            background: rgba(20,20,30,0.95);
+            transform: translateY(-3px);
+            color: white;
+            border-color: rgba(79,142,247,0.3);
+        }
+
+        .btn-glass .arrow {
+            display: inline-block;
+            transition: transform 0.3s ease;
+            opacity: 0.6;
+            direction: ltr;
+        }
+
+        .btn-glass:hover .arrow { transform: translateX(-5px); opacity:1; }
     </style>
 </head>
 <body>
@@ -1167,6 +1242,14 @@
         <div class="hero-orb hero-orb-1"></div>
         <div class="hero-orb hero-orb-2"></div>
         <div class="hero-orb hero-orb-3"></div>
+        <svg id="heroPaths" class="hero-paths-svg" viewBox="0 0 696 316" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <linearGradient id="pathGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#4F8EF7" stop-opacity="1"/>
+                    <stop offset="100%" stop-color="#7C3AED" stop-opacity="1"/>
+                </linearGradient>
+            </defs>
+        </svg>
         <div class="hero-content container">
             <div class="hero-details">
                 <div class="hero-badge">✦ متاح للمشاريع · الرياض، السعودية</div>
@@ -1174,7 +1257,12 @@
                 <div class="subtitle">حلول تقنية ذكية لأعمال ناجحة</div>
                 <p class="hero-desc">نبني مواقع، تطبيقات، أنظمة بيانات، وروبوتات ذكاء اصطناعي — من الرياض للعالم 🇸🇦</p>
                 <div class="hero-buttons">
-                    <a href="#contact" class="btn btn-primary">ابدأ مشروعك الآن</a>
+                    <div class="btn-glass-wrap">
+                        <a href="#contact" class="btn-glass">
+                            <span>ابدأ مشروعك الآن</span>
+                            <span class="arrow">←</span>
+                        </a>
+                    </div>
                     <a href="#projects" class="btn btn-secondary">شاهد أعمالنا</a>
                 </div>
                 <div class="hero-services-preview">
@@ -1700,6 +1788,62 @@
             window.location.href = link;
             this.reset();
         });
+
+        // === BACKGROUND PATHS ===
+        (function(){
+            var svg = document.getElementById('heroPaths');
+            if (!svg) return;
+            [1,-1].forEach(function(pos){
+                for(var i=0;i<36;i++){
+                    var p = 380 - i*5*pos;
+                    var q = 312 - i*5*pos;
+                    var r = 152 - i*5*pos;
+                    var s = 616 - i*5*pos;
+                    var t = 684 - i*5*pos;
+                    var d = 'M-'+p+' -'+(189+i*6)+
+                            'C-'+p+' -'+(189+i*6)+
+                            ' -'+q+' '+(216-i*6)+
+                            ' '+r+' '+(343-i*6)+
+                            'C'+s+' '+(470-i*6)+
+                            ' '+t+' '+(875-i*6)+
+                            ' '+t+' '+(875-i*6);
+                    var path = document.createElementNS('http://www.w3.org/2000/svg','path');
+                    path.setAttribute('d',d);
+                    path.setAttribute('stroke','url(#pathGrad)');
+                    path.setAttribute('stroke-width', String(0.5+i*0.03));
+                    path.setAttribute('fill','none');
+                    svg.appendChild(path);
+                    try {
+                        var len = path.getTotalLength();
+                        var dash = len*0.3, gap = len*0.7;
+                        path.setAttribute('stroke-dasharray', dash+' '+gap);
+                        var dur = (18+Math.random()*12)*1000;
+                        var del = -(Math.random()*dur);
+                        path.animate([
+                            {strokeDashoffset:'0',       opacity: String(0.08+i*0.012)},
+                            {strokeDashoffset:String(-len/2), opacity: String(0.28+i*0.007)},
+                            {strokeDashoffset:String(-len),   opacity: String(0.08+i*0.012)}
+                        ],{duration:dur, iterations:Infinity, easing:'linear', delay:del});
+                    } catch(e){}
+                }
+            });
+        })();
+
+        // === LETTER-BY-LETTER TITLE ===
+        (function(){
+            var h1 = document.querySelector('.hero h1');
+            if(!h1) return;
+            var text = h1.textContent.trim();
+            h1.innerHTML = '';
+            h1.classList.add('letters-split');
+            text.split('').forEach(function(ch, i){
+                var sp = document.createElement('span');
+                sp.className = 'hero-letter';
+                sp.textContent = ch;
+                sp.style.animationDelay = (0.2 + i*0.07)+'s';
+                h1.appendChild(sp);
+            });
+        })();
     </script>
 </body>
 </html>
